@@ -1,9 +1,9 @@
 # metroticket-MySQL
 
-* Important
+# Important
 Database schema and Algorithm (including Procedures, Triggers, etc) are hosted at https://github.com/mr-loop-1/SQLpath-Algo. Inserting them into the schema is **VERY IMPORTANT** for functioning of the app.
 
-** Instructions
+## Instructions
 1. Download all the Files
 2. Create a database `metro` in MySQL and upadte your credentials (username, password) in the `database.js` file
 3. Build the schema using `database.sql` file
@@ -11,7 +11,9 @@ Database schema and Algorithm (including Procedures, Triggers, etc) are hosted a
 5. Open terminal and do `npm start`
 
 
-** Screenshots
+## Screenshots
+
+
 ![Screenshot 2022-03-30 195322](https://user-images.githubusercontent.com/62374784/160860682-e14bab9e-439e-4685-920d-f88bbd4876c3.png)
 ![Screenshot 2022-03-30 195356](https://user-images.githubusercontent.com/62374784/160860699-e099380e-29c8-4c8d-b3d1-31b84636bf44.png)
 ![Screenshot 2022-03-30 195520](https://user-images.githubusercontent.com/62374784/160860714-19776f2e-9a12-4fde-81ef-c18861b9a94c.png)
