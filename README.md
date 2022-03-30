@@ -11,7 +11,7 @@ Database schema and Algorithm (including Procedures, Triggers, etc) are inside t
 
 ## Instructions
 1. Download all the Files
-2. Create a database `metro` in MySQL and upadte your credentials (username, password) in the `database.js` file
+2. Create a database `metro3` in MySQL and update your credentials (username, password) in the `database.js` file
 3. **Navigate to "myDatabase" folder**
 4. Build the schema using `schema.sql` file
 5. Implement the algorithm using `algo.sql` file
