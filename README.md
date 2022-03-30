@@ -1,6 +1,6 @@
 # metroticket-MySQL
 
-> Simplified and Compiled the bits and pieces from https://github.com/mr-loop-1/ViceCity-MetroProject
+> Converged and audited the bits and pieces from older repo - https://github.com/mr-loop-1/ViceCity-MetroProject
 > 
 > Updated for latest `mysql2` npm package
 # Important
