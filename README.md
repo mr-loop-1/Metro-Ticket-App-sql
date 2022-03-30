@@ -1,5 +1,6 @@
 # metroticket-MySQL
 
+> Updated for latest `mysql2` npm package
 # Important
 Database schema and Algorithm (including Procedures, Triggers, etc) are inside the **'myDatabase' folder** (and at https://github.com/mr-loop-1/SQLpath-Algo). Inserting them into the schema is **VERY IMPORTANT** for functioning of the app.
 
