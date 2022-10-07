@@ -6,7 +6,7 @@
 # Important
 Database schema and Algorithm (including Procedures, Triggers, etc) are inside the **'myDatabase' folder** (and at https://github.com/mr-loop-1/SQLpath-Algo). Inserting them into the schema is **VERY IMPORTANT** for functioning of the app.
 
-# Golden Point
+# Point
 #### The Entire Path Calculation is done in MySQL using stored procedures and dynamic SQL.
 
 ## Instructions
