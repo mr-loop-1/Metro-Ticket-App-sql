@@ -51,10 +51,10 @@ router.get('/details', (req, res) => {
         if (err) throw err;
     });
 
-    db.query("SELECT COUNT(Station) AS aaa FROM stack_Compare", (err, results) => {
+    db.query("SELECT COUNT(Station) AS freq FROM stack_Compare", (err, results) => {
         if (err) throw err;
-        time = (10 * results[0].aaa)  - 5;
-        price = (results[0].aaa*10);
+        time = (10 * results[0].freq)  - 5;
+        price = (results[0].freq*10);
     });
 
     db.query("SELECT * FROM stack_Compare", (err, results) => {
@@ -108,17 +108,6 @@ router.post("/status", (req, res) => {
 
     res.redirect('/users/guest');
 });
-
-
-
-// router.get("/status", (req,res) => {
-//     res.render("status", {
-//         title: "number",
-//         name1: fname,
-//         name2: lname,
-//         id: variabled3,
-//     });
-// });
 
 
 let variabled4;

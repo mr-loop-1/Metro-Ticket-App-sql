@@ -1,13 +1,13 @@
-var mysql = require('mysql2');
+const mysql = require('mysql2');
 
-var conn = mysql.createConnection({         //createConnection is fixed, con is variable
+const conn = mysql.createConnection({         //createConnection is fixed, con is variable
   host: "localhost",            // CHANGE IF DIFFERENT HOST
   user: "root",                 // CHANGE IF DIFFERENT USER
-  password: "yesmysql123",                // YOUR PASSWORD HERE
-  database: "metro3"            // CHANGE IF DATABASE NAME DIFFERENT
+  password: "",                // YOUR PASSWORD HERE
+  database: "metro"            // CHANGE IF DATABASE NAME DIFFERENT
 });
 
-conn.connect(function(err) {                 //connect is fixed function to connect to con
+conn.connect(err => {                 //connect is fixed function to connect to con
   if (err) throw err;
   console.log("Connected!");
 });
