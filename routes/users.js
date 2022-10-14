@@ -8,25 +8,25 @@ router.get('/metro', (req, res) => {
     res.render("metro");
 });
 router.get("/about", (req,res) => {
-    res.render("about");
+    res.render("filler/about");
 });
 router.get("/planner", (req,res) => {
-    res.render("planner");
+    res.render("booking/planner");
 });
 router.get("/login_admin", (req,res) => {
     res.render("login_admin");
 });
 router.get("/contact", (req, res) => {
-    res.render('contact');
+    res.render('filler/contact');
 });
 router.get('/team', (req, res) => {
-    res.render('team');
+    res.render('filler/team');
 });  
 router.get('/portfolio', (req, res) => {
-    res.render('portfolio');
+    res.render('filler/portfolio');
 });  
 router.get('/networkmap', (req, res) => {
-    res.render('networkmap');
+    res.render('filler/networkmap');
 });
   
 
@@ -59,7 +59,7 @@ router.get('/details', (req, res) => {
 
     db.query("SELECT * FROM stack_Compare", (err, results) => {
         if (err) throw err;
-        res.render("details", {
+        res.render("booking/details", {
             title: "User Listt",
             userdataa: results,
             timed: time,
@@ -75,7 +75,7 @@ router.get('/details', (req, res) => {
 let variabled3;
 
 router.get("/guest", (req,res) => {
-    res.render("guest", {
+    res.render("booking/guest", {
         title: "mains",
         start: variabled,
         end: variabled2,
@@ -111,14 +111,14 @@ router.post("/status", (req, res) => {
 
 
 
-router.get("/status", (req,res) => {
-    res.render("status", {
-        title: "number",
-        name1: fname,
-        name2: lname,
-        id: variabled3,
-    });
-});
+// router.get("/status", (req,res) => {
+//     res.render("status", {
+//         title: "number",
+//         name1: fname,
+//         name2: lname,
+//         id: variabled3,
+//     });
+// });
 
 
 let variabled4;
@@ -134,7 +134,7 @@ router.get("/confirm", (req,res) => {
         [variabled4],
         (err, results) => {
             if (err) throw err;
-            res.render("confirm", { title: "ticket info", Ticket: results[0] });
+            res.render("confirm/confirm", { title: "ticket info", Ticket: results[0] });
         }
     );
 });
