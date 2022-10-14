@@ -1,17 +1,18 @@
-# metroticket-MySQL
+# Rail Ticketing Application
 
-> Converged and audited the bits and pieces from older repo - https://github.com/mr-loop-1/ViceCity-MetroProject
-> 
-> Updated for latest `mysql2` npm package
+# Version History
+| Date | Summary | Improvement | Link
+| ---- | ------- | ----- | ------|
+| Apr 2021 | Original app folder |  | [Old Repo](https://github.com/mr-loop-1/ViceCity-MetroProject)
+| Mar 2022 | Organised application | minor (sql2) | [Old Repo](https://github.com/mr-loop-1/RailTicketSQL-Legacy)
+| Oct 2022 | Current Version | Major (ES6, refactoring) | [This Repo](#repository-container-header)
+
 # Important
-Database schema and Algorithm (including Procedures, Triggers, etc) are inside the **'myDatabase' folder** (and at https://github.com/mr-loop-1/SQLpath-Algo). Inserting them into the schema is **VERY IMPORTANT** for functioning of the app.
-
-# Point
-#### The Entire Path Calculation is done in MySQL using stored procedures and dynamic SQL.
+Database schema and path algorithm are inside the **'myDatabase' folder** (and at https://github.com/mr-loop-1/SQLpath-Algo). Creating the database locally is **basis** for functioning of the app.
 
 ## Instructions
 1. Download all the Files
-2. Create a database `metro3` in MySQL and update your credentials (username, password) in the `database.js` file
+2. Create a database `metro` in MySQL and update your credentials (username, password) in the `database.js` file
 3. **Navigate to "myDatabase" folder**
 4. Build the schema using `schema.sql` file
 5. Implement the algorithm using `algo.sql` file
