@@ -1,7 +1,19 @@
 <%- include('../include/header_nav.ejs') %>
 
+    <% if(Ticket == undefined) { %>
 
+        <div class="blog">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Vice City Database says</p>
+                    <h2>This is NOT a valid Ticket !!</h2>
+                    <h4>Please book a ticket first or re-check the Ticket No.</h4>
+                </div>
+            </div>
+        </div>
 
+    <% } else { %>
+    
         <div class="blog">
             <div class="container">
                 <div class="section-header text-center">
@@ -20,7 +32,7 @@
               <tr>
                 <td colspan="2" scope="rowgroup" style="background-color: #fff;"> </td>
                 <th scope="col">Ticket No.</th>
-                <th scope="col" style="text-align: center;">658413</th>
+                <th scope="col" style="text-align: center;"><%= Ticket.Ticket %></th>
               </tr>
             </thead>
             <tbody>
@@ -47,7 +59,7 @@
         <br>
         <br>
 
-
+    <%  } %>
 
         <%- include('../include/footer.ejs') %>
 

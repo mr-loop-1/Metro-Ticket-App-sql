@@ -134,8 +134,4 @@ router.post("/login", (req,res) => {
     res.redirect("/users/metro");
 });
 
-router.get("/login", (req, res) => {
-    res.render('login');
-});
-
 module.exports = router;
