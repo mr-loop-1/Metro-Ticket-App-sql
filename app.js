@@ -13,7 +13,9 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/booking', bookingRouter);
 app.use('/users', usersRouter);
+app.use(staticRouter);
 app.use(errorController.get404);  
 
 app.listen(3000);
