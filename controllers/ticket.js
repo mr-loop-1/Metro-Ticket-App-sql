@@ -1,12 +1,19 @@
-const express = require('express');
-const router = express.Router();
-const db = require('../database');
 
+
+exports.getTicket = (req, res, next) => {
+
+}
+
+exports.checkTicket = (req, res, next) => {
+    const ticket = req.body.ticket;
+    res.redirect('/users/confirm');
+}
+
+const db = require('../database');
 let variabled4;
 
 router.post("/confirm", (req, res) => {
-    variabled4 = req.body.ticket;
-    res.redirect('/users/confirm');
+    
 });
 
 router.get("/confirm", (req,res) => {
@@ -19,11 +26,3 @@ router.get("/confirm", (req,res) => {
         }
     );
 });
-
-router.post("/login", (req,res) => {
-    if (req.body.username=="Tommy Vercetti" && req.body.pass=="thisismyaccount") 
-        res.redirect('/users/login');
-    res.redirect("/users/metro");
-});
-
-module.exports = router;
