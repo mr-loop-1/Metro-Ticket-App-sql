@@ -1,6 +1,7 @@
 const {URLSearchParams} = require('url')
 
 exports.getTicket = (req, res, next) => {
+    const ticketId = req.query.ticketId;
     db.query(
         "SELECT Ticket,Fname,Lname,Phone,DATE_FORMAT(Booking,'%Y-%m-%d') AS Booking,starter,dest FROM details WHERE Ticket=?",
         [variabled4],
