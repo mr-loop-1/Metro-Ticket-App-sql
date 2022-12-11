@@ -1,15 +1,18 @@
 const {URLSearchParams} = require('url')
+const {ticketData} = require('./../data')
 
-exports.getTicket = (req, res, next) => {
+exports.getTicket = async (req, res, next) => {
     const ticketId = req.query.ticketId;
-    db.query(
-        "SELECT Ticket,Fname,Lname,Phone,DATE_FORMAT(Booking,'%Y-%m-%d') AS Booking,starter,dest FROM details WHERE Ticket=?",
-        [variabled4],
-        (err, results) => {
-            if (err) throw err;
-            res.render("confirm/confirm", { title: "ticket info", Ticket: results[0] });
-        }
-    );
+
+    if(!ticketId) {
+        throw new Error;
+    }
+
+    const ticketDetails = await ticketData.getTicket(ticketId);
+
+    console.log("🚀 ~ file: ticket.js:7 ~ exports.getTicket= ~ ticketDetails:", ticketDetails)
+    
+    res.render('confirm/confirm', {Ticket: ticketDetails});
 }
 
 // Now I see this post request can even be omitted. I just didn't want to interfere with original logic
@@ -18,16 +21,5 @@ exports.checkTicket = (req, res, next) => {
     const query = new URLSearchParams({
         ticketId
     })
-    res.redirect('/users/confirm'+query);
+    res.redirect('/ticket?'+query);
 }
-
-router.get("/confirm", (req,res) => {
-    db.query(
-        "SELECT Ticket,Fname,Lname,Phone,DATE_FORMAT(Booking,'%Y-%m-%d') AS Booking,starter,dest FROM details WHERE Ticket=?",
-        [variabled4],
-        (err, results) => {
-            if (err) throw err;
-            res.render("confirm/confirm", { title: "ticket info", Ticket: results[0] });
-        }
-    );
-});

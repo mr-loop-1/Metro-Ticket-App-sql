@@ -1,9 +1,18 @@
 const { Router } = require('express');
+const { bookingController } = require('./../controllers')
+
+
 const router = Router();
 
-router.get("/planner", (req,res) => {
-    res.render("booking/planner");
-});
+router.get('/stations', (req, res, next) => {
+    return res.render("booking/planner");
+});  // maps to planner
+// router.get('./route', bookingController.getRoute); // maps to details
+// router.get('./details') // maps to guest
+
+// router.post('./stations', bookingController.createRoute);
+// router.post('./details', bookingController.registerTicket);
+
 
 router.post("/details", (req, res) => {
     variabled=req.body.selectpicker;
@@ -82,3 +91,5 @@ router.post("/status", (req, res) => {
 
     res.redirect('/users/guest');
 });
+
+module.exports = router;

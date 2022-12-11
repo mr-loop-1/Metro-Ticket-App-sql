@@ -23,3 +23,5 @@ router.get('/networkmap', (req, res) => {
 router.get('/', (req, res) => {
     res.render("metro");
 });
+
+module.exports = router;

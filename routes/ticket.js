@@ -3,11 +3,8 @@ const {ticketController} = require('./../controllers')
 
 const router = express.Router();
 
-
-router.get("/ticket", ticketController.getTicket);
-router.post("/ticket", ticketController.checkTicket);
-
-
+router.get("", ticketController.getTicket);
+router.post("", ticketController.checkTicket);
 
 router.post("/login", (req,res) => {
     if (req.body.username=="Tommy Vercetti" && req.body.pass=="thisismyaccount") 

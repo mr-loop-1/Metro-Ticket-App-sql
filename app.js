@@ -1,9 +1,11 @@
 const express = require('express');
 const path = require('path');
-
-
-const usersRouter = require('./routes/users');
-const errorController = require('./routes/error');
+const {
+    bookingRouter,
+    errorRouter,
+    staticRouter,
+    ticketRouter
+} = require('./routes');
 
 const app = express();
 
@@ -14,8 +16,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/booking', bookingRouter);
-app.use('/ticket', usersRouter);
+app.use('/ticket', ticketRouter);
 app.use(staticRouter);
-app.use(errorController.get404);  
+app.use(errorRouter.get404);  
 
 app.listen(3000);

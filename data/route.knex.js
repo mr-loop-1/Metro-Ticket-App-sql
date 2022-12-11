@@ -1,4 +1,4 @@
-const knex = require("knex");
+const knex = require("./../database2");
 
 exports.createRoute = () => {
 
@@ -6,6 +6,7 @@ exports.createRoute = () => {
 
 exports.fetchRoute = () => {
 
-}
 
-exports.
+
+    // fetchRoute
+}
