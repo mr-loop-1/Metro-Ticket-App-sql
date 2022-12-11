@@ -24,4 +24,11 @@ router.get('/', (req, res) => {
     res.render("metro");
 });
 
+
+router.post("/login", (req,res) => {
+    if (req.body.username=="Tommy Vercetti" && req.body.pass=="thisismyaccount") 
+        res.redirect('/users/login');
+    res.redirect("/users/metro");
+});
+
 module.exports = router;

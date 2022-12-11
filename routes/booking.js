@@ -10,7 +10,7 @@ router.get('/stations', (req, res, next) => {
 // router.get('./route', bookingController.getRoute); // maps to details
 // router.get('./details') // maps to guest
 
-// router.post('./stations', bookingController.createRoute);
+router.post('./stations', bookingController.createRoute);
 // router.post('./details', bookingController.registerTicket);
 
 

@@ -1,3 +1,4 @@
 module.exports = {
-    "ticketData": require('./ticket.knex')
+    "ticketData": require('./ticket.knex'),
+    "rawData": require('./raw.knex')
 }
