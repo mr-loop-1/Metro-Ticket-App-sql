@@ -1,6 +1,6 @@
 const { knex } = require("./../database2");
 
 exports.query = async (queryString) => {
-    knex.raw(queryString);
+    await knex.raw(queryString);
     return;
 }
