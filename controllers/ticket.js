@@ -12,7 +12,7 @@ exports.getTicket = async (req, res, next) => {
 
     console.log("🚀 ~ file: ticket.js:7 ~ exports.getTicket= ~ ticketDetails:", ticketDetails)
     
-    res.render('confirm/confirm', {Ticket: ticketDetails});
+    return res.render('confirm/confirm', {Ticket: ticketDetails});
 }
 
 // Now I see this post request can even be omitted. I just didn't want to interfere with original logic
@@ -21,5 +21,5 @@ exports.checkTicket = (req, res, next) => {
     const query = new URLSearchParams({
         ticketId
     })
-    res.redirect('/ticket?'+query);
+    return res.redirect('/ticket?'+query);
 }
