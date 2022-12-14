@@ -7,11 +7,11 @@ const router = Router();
 router.get('/stations', (req, res, next) => {
     return res.render("booking/planner");
 });  // maps to planner
-router.get('./route', bookingController.getRoute); // maps to details
-router.get('./details', bookingController.showDetails) // maps to guest
+router.get('/route', bookingController.getRoute); // maps to details
+router.get('/details', bookingController.showDetails) // maps to guest
 
-router.post('./stations', bookingController.createRoute);
-router.post('./details', bookingController.registerTicket);
+router.post('/stations', bookingController.createRoute);
+router.post('/ticket', bookingController.registerTicket);
 
 
 // router.post("/details", (req, res) => {

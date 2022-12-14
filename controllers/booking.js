@@ -8,9 +8,9 @@ exports.createRoute = async (req, res, next) => {
         throw new Error;
     }
     
-    rawData.query("TRUNCATE stack_Compare");
-    rawData.query("TRUNCATE lastNodeTracker");
-    rawData.query("SET max_sp_recursion_depth=100");
+    await rawData.query("TRUNCATE stack_Compare");
+    await rawData.query("TRUNCATE lastNodeTracker");
+    await rawData.query("SET max_sp_recursion_depth=100");
 
     await routeData.createRoute(station1, station2);
 
@@ -19,7 +19,7 @@ exports.createRoute = async (req, res, next) => {
         station2
     })
 
-    return res.redirect('/booking/stations?'+query)
+    return res.redirect('/booking/route?'+query)
 }
 
 exports.getRoute = async ( req, res, next) => {
@@ -28,12 +28,13 @@ exports.getRoute = async ( req, res, next) => {
         throw new Error;
     }
 
-    const route = await routeData.getRoute();
+    const route = await routeData.fetchRoute();
+    console.log("🚀 ~ file: booking.js:32 ~ exports.getRoute= ~ route:", route)
 
     rawData.query("TRUNCATE stack_Compare");
     rawData.query("TRUNCATE lastNodeTracker");
 
-    if(route.length) {
+    if(!route.length) {
         throw new Error; //? or simply display alternate in view
     }
 
@@ -41,9 +42,9 @@ exports.getRoute = async ( req, res, next) => {
     const {time, price} = bookingTasks.getTimeAndPrice(route.length);
 
     const query = new URLSearchParams({
-        station1,
-        station2,
-        price
+        start: station1,
+        end: station2,
+        price: price
     })
 
     return res.render("booking/details", {
@@ -52,7 +53,7 @@ exports.getRoute = async ( req, res, next) => {
         priced: price,
         enter: gate1,
         exit: gate2,
-        ...query
+        query
     });
 }
 
@@ -87,7 +88,7 @@ exports.registerTicket = async (req, res, next) => {
 
     await ticketData.createTicket(inputs);
 
-    const query = new URLSearchParams(...inputs, price)
+    const query = new URLSearchParams({...inputs, price})
 
     res.redirect('/booking/details?'+query);
 

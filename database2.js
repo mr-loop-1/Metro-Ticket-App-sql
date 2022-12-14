@@ -10,6 +10,6 @@ const knex = Knex({
         password: "yesmysql123",
         database: "metro3",
     },
-    ...knexSnakeCaseMappers(),
+    // ...knexSnakeCaseMappers(),
 });
 exports.knex = knex;

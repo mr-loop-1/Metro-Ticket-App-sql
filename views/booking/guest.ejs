@@ -29,11 +29,11 @@
                         
                         
                         
-                        <form action="/users/status" method="post">
+                        <form action="/booking/ticket" method="POST">
                         <fieldset>
                           <input type="hidden" name="start" value="<%=start%>">
                           <input type="hidden" name="end" value="<%=end%>">
-                          <input type="hidden" name="price" value="<%=price%>">
+                          <input type="hidden" name="price" value="<%=priced%>">
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group first">
@@ -67,22 +67,11 @@
                               </div>
                             </div>
                         </div>
-<!--
-                        <div class="row">
-                            <div class="col-md-12">
-                              <div class="form-group first">
-                                <label for="ticket">Ticket No.</label>
-                                <input type="text" class="form-control" value="<%= id %>" id="ticket" name="ticket" readonly>
-                              </div>    
-                            </div>
-                          </div>
-                        -->
-
                         <br>
                         <div class="blog-item">
                         <div class="blog-title">
                             <h3>Proceed to checkout</h3>
-                            <button class="btn2" for="submit-form"><b>Go</b></a>
+                            <button class="btn2" type="submit"><b>Go</b>
                         </div>
                     </div>
                     </fieldset>
