@@ -1,120 +1,151 @@
 <%- include('../include/header_nav.ejs') %>
 
-
-            <!-- Portfolio Start -->
-            <div class="portfolio">
-                <div class="container">
-                    <div class="section-header text-center">
-                        <h2>Visit Our Projects</h2>
+<!-- Portfolio Start -->
+<div class="portfolio">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2>Visit Our Projects</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul id="portfolio-flters">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".first">Complete</li>
+                    <li data-filter=".second">Running</li>
+                    <li data-filter=".third">Upcoming</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row portfolio-container">
+            <div
+                class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp"
+                data-wow-delay="0.1s"
+            >
+                <div class="portfolio-warp">
+                    <div class="portfolio-img">
+                        <img src="/img/train.jpg" alt="Image" />
+                        <div class="portfolio-overlay"></div>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <ul id="portfolio-flters">
-                                <li data-filter="*" class="filter-active">All</li>
-                                <li data-filter=".first">Complete</li>
-                                <li data-filter=".second">Running</li>
-                                <li data-filter=".third">Upcoming</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row portfolio-container">
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="portfolio-warp">
-                                <div class="portfolio-img">
-                                    <img src="/img/train.jpg" alt="Image">
-                                    <div class="portfolio-overlay">
-                                        
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Leaf_Links</h3>
-                                    <a class="btn" href="/img/train.jpg" data-lightbox="portfolio">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="portfolio-warp">
-                                <div class="portfolio-img">
-                                    <img src="/img/train2.jpg" alt="Image">
-                                    <div class="portfolio-overlay">
-                                        
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Downtown</h3>
-                                    <a class="btn" href="/img/train2.jpg" data-lightbox="portfolio">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item third wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="portfolio-warp">
-                                <div class="portfolio-img">
-                                    <img src="/img/train3.jpg" alt="Image">
-                                    <div class="portfolio-overlay">
-                                        
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Ocean_Beach</h3>
-                                    <a class="btn" href="/img/train3.jpg" data-lightbox="portfolio">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="portfolio-warp">
-                                <div class="portfolio-img">
-                                    <img src="/img/metro4edit.png" alt="Image">
-                                    <div class="portfolio-overlay">
-                                        
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Subways</h3>
-                                    <a class="btn" href="/img/metro4edit.png" data-lightbox="portfolio">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="portfolio-warp">
-                                <div class="portfolio-img">
-                                    <img src="/img/metro2.jpg" alt="Image">
-                                    <div class="portfolio-overlay">
-                                        
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Old-City</h3>
-                                    <a class="btn" href="/img/metro2.jpg" data-lightbox="portfolio">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item third wow fadeInUp" data-wow-delay="0.6s">
-                            <div class="portfolio-warp">
-                                <div class="portfolio-img">
-                                    <img src="/img/metro3.jpg" alt="Image">
-                                    <div class="portfolio-overlay">
-                                        
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Forest_Hills</h3>
-                                    <a class="btn" href="/img/metro3.jpg" data-lightbox="portfolio">+</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 load-more">
-                            <a class="btn" href="#">Load More</a>
-                        </div>
+                    <div class="portfolio-text">
+                        <h3>Leaf_Links</h3>
+                        <a
+                            class="btn"
+                            href="/img/train.jpg"
+                            data-lightbox="portfolio"
+                            >+</a
+                        >
                     </div>
                 </div>
             </div>
-            <!-- Portfolio End -->
+            <div
+                class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp"
+                data-wow-delay="0.2s"
+            >
+                <div class="portfolio-warp">
+                    <div class="portfolio-img">
+                        <img src="/img/train2.jpg" alt="Image" />
+                        <div class="portfolio-overlay"></div>
+                    </div>
+                    <div class="portfolio-text">
+                        <h3>Downtown</h3>
+                        <a
+                            class="btn"
+                            href="/img/train2.jpg"
+                            data-lightbox="portfolio"
+                            >+</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div
+                class="col-lg-4 col-md-6 col-sm-12 portfolio-item third wow fadeInUp"
+                data-wow-delay="0.3s"
+            >
+                <div class="portfolio-warp">
+                    <div class="portfolio-img">
+                        <img src="/img/train3.jpg" alt="Image" />
+                        <div class="portfolio-overlay"></div>
+                    </div>
+                    <div class="portfolio-text">
+                        <h3>Ocean_Beach</h3>
+                        <a
+                            class="btn"
+                            href="/img/train3.jpg"
+                            data-lightbox="portfolio"
+                            >+</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div
+                class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp"
+                data-wow-delay="0.4s"
+            >
+                <div class="portfolio-warp">
+                    <div class="portfolio-img">
+                        <img src="/img/metro4edit.png" alt="Image" />
+                        <div class="portfolio-overlay"></div>
+                    </div>
+                    <div class="portfolio-text">
+                        <h3>Subways</h3>
+                        <a
+                            class="btn"
+                            href="/img/metro4edit.png"
+                            data-lightbox="portfolio"
+                            >+</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div
+                class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp"
+                data-wow-delay="0.5s"
+            >
+                <div class="portfolio-warp">
+                    <div class="portfolio-img">
+                        <img src="/img/metro2.jpg" alt="Image" />
+                        <div class="portfolio-overlay"></div>
+                    </div>
+                    <div class="portfolio-text">
+                        <h3>Old-City</h3>
+                        <a
+                            class="btn"
+                            href="/img/metro2.jpg"
+                            data-lightbox="portfolio"
+                            >+</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div
+                class="col-lg-4 col-md-6 col-sm-12 portfolio-item third wow fadeInUp"
+                data-wow-delay="0.6s"
+            >
+                <div class="portfolio-warp">
+                    <div class="portfolio-img">
+                        <img src="/img/metro3.jpg" alt="Image" />
+                        <div class="portfolio-overlay"></div>
+                    </div>
+                    <div class="portfolio-text">
+                        <h3>Forest_Hills</h3>
+                        <a
+                            class="btn"
+                            href="/img/metro3.jpg"
+                            data-lightbox="portfolio"
+                            >+</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 load-more">
+                <a class="btn" href="#">Load More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio End -->
 
-            
-
-
-            <%- include('../include/caraousal.ejs') %>
-
-            <%- include('../include/footer.ejs') %>
+<%- include('../include/caraousal.ejs') %> <%- include('../include/footer.ejs')
+%>

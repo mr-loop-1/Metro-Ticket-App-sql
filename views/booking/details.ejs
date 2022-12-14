@@ -1,115 +1,84 @@
 <%- include('../include/header_nav.ejs') %>
 
+<div class="blog">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Journey Planner</p>
+            <h2>Please check your route details</h2>
+        </div>
+    </div>
+</div>
 
-
-
-            <div class="blog">
-                <div class="container">
-                    <div class="section-header text-center">
-                        <p>Journey Planner</p>
-                        <h2>Please check your route details</h2>
+<div class="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 wow fadeInUp">
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <button><i class="fas fa-bullseye"></i></button>
+                    </div>
+                    <br />
+                    <div class="blog-title">
+                        <h3>Continue</h3>
+                        <a class="btn" href="/booking/details?<%=query%>">=></a>
+                    </div>
+                    <br /><br /><br />
+                    <div class="blog-meta">
+                        <p><a href=""></a></p>
+                    </div>
+                    <div class="blog-text2">
+                        <p>
+                            <img src="/img/map.jpg" style="width: 100%" />
+                        </p>
                     </div>
                 </div>
             </div>
 
-
-
-            <div class="blog">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 wow fadeInUp">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <button><i class="fas fa-bullseye"></i></button>
-                                </div>
-                                <br>
-                                <div class="blog-title">
-                                    <h3>Continue</h3>
-                                    <a class="btn" href="/booking/details?<%=query%>">=></a>
-                                </div>
-                                <br><br><br>
-                                <div class="blog-meta">
-                                    <p> <a href=""></a></p>
-                                </div>
-                                <div class="blog-text2">
-                                    <p>
-                                        <img src="/img/map.jpg" style="width:100%" />
-                                    </p>
-                                </div>
+            <div class="col-lg-8 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="blog-item">
+                    <div class="blog-img3">
+                        <div class="routedetails">
+                            <div class="path">
+                                <% if(userdataa.length!=0){
+                                userdataa.forEach(function(data){ %>
+                                <i class="fa fa-arrow-down"></i><br />
+                                <i
+                                    class="fas fa-subway"
+                                    style="color: #<%=data.Color%>"
+                                ></i
+                                ><b>&nbsp;<%=data.Station %></b>
+                                <br />
+                                <% }) %> <% } else{ %>
+                                <tr>
+                                    <td colspan="7">No Data Found</td>
+                                </tr>
+                                <% } %>
                             </div>
-                        </div>
+                            <div class="price">
+                                <i class="fa fa-money-bill-wave"></i>
 
-                        <div class="col-lg-8 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="blog-item">
-                                <div class="blog-img3">
-                                    <div class="routedetails">
-                                        <div class="path">
-                                            <%
-                      if(userdataa.length!=0){
-                        userdataa.forEach(function(data){
-                      %>
-                      <i class="fa fa-arrow-down"></i><br>
-                          <i class="fas fa-subway" style="color:#<%=data.Color%>"></i><b>&nbsp;<%=data.Station %></b>
-                          <br>
-                      <%  }) %>
-                      <% } else{ %>
-                          <tr>
-                              <td colspan="7">No Data Found</td>
-                          </tr>
-                      <% } %>
-                                        </div>
-                                        <div class="price">
-                                            <i class="fa fa-money-bill-wave" ></i>
-
-                                            <br>
-                                            <i class="fa fa-rupee-sign"></i> <%= priced %>.00
-                                            <br>
-                                            <i class="fas fa-clock" ></i>
-                                            <br>
-                                            <%= timed %> minutes
-                                        </div>
-                                        <div class="stats">
-                                            <p><br><b>Entry: Gate No. <%= enter %><br>Exit: Gate No. <%= exit %></b></p>
-                                        </div>
-                                    </div>
-                                </div>
+                                <br />
+                                <i class="fa fa-rupee-sign"></i> <%= priced
+                                %>.00
+                                <br />
+                                <i class="fas fa-clock"></i>
+                                <br />
+                                <%= timed %> minutes
+                            </div>
+                            <div class="stats">
+                                <p>
+                                    <br /><b
+                                        >Entry: Gate No. <%= enter %><br />Exit:
+                                        Gate No. <%= exit %></b
+                                    >
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
 
-
-
-
-
-
-
-
-
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <%- include('../include/footer.ejs') %>
-
+<%- include('../include/footer.ejs') %>

@@ -1,42 +1,46 @@
 <%- include('include/header_nav.ejs') %>
 
-
-
-
 <!-- Service Start -->
 <div class="service">
     <div class="container">
-    
         <div class="row">
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item">
                     <div class="service-img">
-                        <img src="/img/metro4.jpg" alt="Image" style="height: 100%;"">
+                        <img src="/img/metro4.jpg" alt="Image" style="height:
+                        100%;"">
                         <div class="service-overlay">
                             <p>
-                                Established in 1995, we have been consistently serving the city.
+                                Established in 1995, we have been consistently
+                                serving the city.
                             </p>
                         </div>
                     </div>
                     <div class="service-text">
                         <h3>About Vice City Metro</h3>
-                        <a class="btn" href="/about"><i class="fas fa-arrow-right"></i></a>
+                        <a class="btn" href="/about"
+                            ><i class="fas fa-arrow-right"></i
+                        ></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="service-item">
                     <div class="service-img">
-                        <img src="/img/map2.jpg" alt="Image" style="height: 100%; ">
+                        <img
+                            src="/img/map2.jpg"
+                            alt="Image"
+                            style="height: 100%"
+                        />
                         <div class="service-overlay">
-                            <p>
-                                Quickly book a ticket
-                            </p>
+                            <p>Quickly book a ticket</p>
                         </div>
                     </div>
                     <div class="service-text">
                         <h3>Book a ticket</h3>
-                        <a class="btn" href="/booking/stations"><i class="fas fa-arrow-right"></i></a>
+                        <a class="btn" href="/booking/stations"
+                            ><i class="fas fa-arrow-right"></i
+                        ></a>
                     </div>
                 </div>
             </div>
@@ -44,33 +48,42 @@
                 <div class="service-item">
                     <div class="service-img">
                         <div class="form-img">
-                            
-                        
-                        <form action="/ticket" method="POST">
-                            
-                            <fieldset>
-                            <label for="ticket"><b>Enter<br>your<br>Ticket No.</b></label>
-                            <input type="text" class="form-control" placeholder="e.g. 1143657" id="ticket" name="ticket">
-                            <br><br>
-                            <input type="submit" id="submit-form" class="hidden" style="display:none" />
-                            </fieldset>
-                        </form>
-                    </div>
-
+                            <form action="/ticket" method="POST">
+                                <fieldset>
+                                    <label for="ticket"
+                                        ><b
+                                            >Enter<br />your<br />Ticket No.</b
+                                        ></label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="e.g. 1143657"
+                                        id="ticket"
+                                        name="ticket"
+                                    />
+                                    <br /><br />
+                                    <input
+                                        type="submit"
+                                        id="submit-form"
+                                        class="hidden"
+                                        style="display: none"
+                                    />
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
                     <div class="service-text">
                         <h3>Inspect your Ticket</h3>
-                        <label class="btn" for="submit-form"><i class="fas fa-arrow-right"></i></label>
+                        <label class="btn" for="submit-form"
+                            ><i class="fas fa-arrow-right"></i
+                        ></label>
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
 </div>
 <!-- Service End -->
 
- 
-
-        <%- include('include/footer.ejs') %>
-
+<%- include('include/footer.ejs') %>

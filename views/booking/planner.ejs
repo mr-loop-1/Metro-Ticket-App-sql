@@ -1,132 +1,285 @@
 <%- include('../include/header_nav.ejs') %>
 
+<div class="blog">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Journey Planner</p>
+            <h2>Please select your boarding details</h2>
+        </div>
+    </div>
+</div>
 
-
-
-
-
-
-
-
-
-            <div class="blog">
-                <div class="container">
-                    <div class="section-header text-center">
-                        <p>Journey Planner</p>
-                        <h2>Please select your boarding details</h2>
-                    </div>
-                </div>
-            </div>
-            
-
-
-
-
-            
-
-            <div class="blog">
-                <div class="container">
-                    
-                    <div class="row">
-
-                        <div class="col-lg-8 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="blog-item">
-                                <div class="blog-img2">
-                                    <img src="/img/map.jpg" />
-                                    <button class="btn">Network Map</button>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <form action="/booking/stations" method="POST">
-                                        <fieldset>
-                                        <select class="selectpicker" data-style="btn-info" name="selectpicker">
-                                          <optgroup label="Select Starting Station">
-                                              <option value="" selected disabled hidden style="text-align:center">From</option>
-                                              <option name="table1" value="Forest_Hills">Forest_Hills</option>
-                                              <option name="table2" value="Downtown">Downtown</option>
-                                              <option name="table3" value="Vice_Port">Vice_Port</option>
-                                              <option name="table3" value="Vice_City_Beach">Vice_City_Beach</option>
-                                              <option name="table3" value="Prawn_Island">Prawn_Island</option>
-                                              <option name="table3" value="Little_Haiti">Little_Haiti</option>
-                                              <option name="table3" value="Ocean_Beach">Ocean_Beach</option>
-                                              <option name="table3" value="Food_Street">Food_Street</option>
-                                              <option name="table3" value="Grand_Library">Grand_Library</option>
-                                              <option name="table3" value="Airport">Airport</option>
-                                              <option name="table3" value="Shipyard">Shipyard</option>
-                                              <option name="table3" value="Sheep_Village">Sheep_Village</option>
-                                              <option name="table3" value="Govt_Office">Govt_Office</option>
-                                              <option name="table3" value="Star_Town">Star_Town</option>
-                                              <option name="table3" value="Old_City">Old_City</option>
-                                              <option name="table3" value="Leaf_Links">Leaf_Links</option>
-                                              <option name="table3" value="City_Scrap">City_Scrap</option>
-                                              <option name="table3" value="New_Downtown">New_Downtown</option>
-                                              <option name="table3" value="Subways">Subways</option>
-                                              <option name="table3" value="Trench">Trench</option>
-                                            </optgroup>
-                                        </select>
-
-                                        <select class="selectpicker" data-style="btn-info" name="selectpicker2">
-                                            <optgroup label="Select Final Station">
-                                                <option value="" selected disabled hidden>Till</option>
-                                                <option name="table1" value="Forest_Hills">Forest_Hills</option>
-                                              <option name="table2" value="Downtown">Downtown</option>
-                                              <option name="table3" value="Vice_Port">Vice_Port</option>
-                                              <option name="table3" value="Vice_City_Beach">Vice_City_Beach</option>
-                                              <option name="table3" value="Prawn_Island">Prawn_Island</option>
-                                              <option name="table3" value="Little_Haiti">Little_Haiti</option>
-                                              <option name="table3" value="Ocean_Beach">Ocean_Beach</option>
-                                              <option name="table3" value="Food_Street">Food_Street</option>
-                                              <option name="table3" value="Grand_Library">Grand_Library</option>
-                                              <option name="table3" value="Airport">Airport</option>
-                                              <option name="table3" value="Shipyard">Shipyard</option>
-                                              <option name="table3" value="Sheep_Village">Sheep_Village</option>
-                                              <option name="table3" value="Govt_Office">Govt_Office</option>
-                                              <option name="table3" value="Star_Town">Star_Town</option>
-                                              <option name="table3" value="Old_City">Old_City</option>
-                                              <option name="table3" value="Leaf_Links">Leaf_Links</option>
-                                              <option name="table3" value="City_Scrap">City_Scrap</option>
-                                              <option name="table3" value="New_Downtown">New_Downtown</option>
-                                              <option name="table3" value="Subways">Subways</option>
-                                              <option name="table3" value="Trench">Trench</option>
-                                              </optgroup>
-                                          </select>
-
-                                        <input type="submit" id="submit-form" class="hidden" style="display:none" />
-                                        </fieldset>
-                                    </form>
-                                </div>
-                                <div class="blog-title">
-                                    <h3>A lovely trip awaits</h3>
-                                    <label class="btn" for="submit-form"><b>Go</b></label>
-                                </div>
-                                <div class="blog-meta">
-                                    
-                                    <p>Important Instruction</p>
-                                
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Please only select the desired options. The choices will not be altered after successful confirmation of the ticket
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+<div class="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="blog-item">
+                    <div class="blog-img2">
+                        <img src="/img/map.jpg" />
+                        <button class="btn">Network Map</button>
                     </div>
                 </div>
             </div>
 
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <form action="/booking/stations" method="POST">
+                            <fieldset>
+                                <select
+                                    class="selectpicker"
+                                    data-style="btn-info"
+                                    name="selectpicker"
+                                >
+                                    <optgroup label="Select Starting Station">
+                                        <option
+                                            value=""
+                                            selected
+                                            disabled
+                                            hidden
+                                            style="text-align: center"
+                                        >
+                                            From
+                                        </option>
+                                        <option
+                                            name="table1"
+                                            value="Forest_Hills"
+                                        >
+                                            Forest_Hills
+                                        </option>
+                                        <option name="table2" value="Downtown">
+                                            Downtown
+                                        </option>
+                                        <option name="table3" value="Vice_Port">
+                                            Vice_Port
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="Vice_City_Beach"
+                                        >
+                                            Vice_City_Beach
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="Prawn_Island"
+                                        >
+                                            Prawn_Island
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="Little_Haiti"
+                                        >
+                                            Little_Haiti
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="Ocean_Beach"
+                                        >
+                                            Ocean_Beach
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="Food_Street"
+                                        >
+                                            Food_Street
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="Grand_Library"
+                                        >
+                                            Grand_Library
+                                        </option>
+                                        <option name="table3" value="Airport">
+                                            Airport
+                                        </option>
+                                        <option name="table3" value="Shipyard">
+                                            Shipyard
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="Sheep_Village"
+                                        >
+                                            Sheep_Village
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="Govt_Office"
+                                        >
+                                            Govt_Office
+                                        </option>
+                                        <option name="table3" value="Star_Town">
+                                            Star_Town
+                                        </option>
+                                        <option name="table3" value="Old_City">
+                                            Old_City
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="Leaf_Links"
+                                        >
+                                            Leaf_Links
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="City_Scrap"
+                                        >
+                                            City_Scrap
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="New_Downtown"
+                                        >
+                                            New_Downtown
+                                        </option>
+                                        <option name="table3" value="Subways">
+                                            Subways
+                                        </option>
+                                        <option name="table3" value="Trench">
+                                            Trench
+                                        </option>
+                                    </optgroup>
+                                </select>
 
+                                <select
+                                    class="selectpicker"
+                                    data-style="btn-info"
+                                    name="selectpicker2"
+                                >
+                                    <optgroup label="Select Final Station">
+                                        <option
+                                            value=""
+                                            selected
+                                            disabled
+                                            hidden
+                                        >
+                                            Till
+                                        </option>
+                                        <option
+                                            name="table1"
+                                            value="Forest_Hills"
+                                        >
+                                            Forest_Hills
+                                        </option>
+                                        <option name="table2" value="Downtown">
+                                            Downtown
+                                        </option>
+                                        <option name="table3" value="Vice_Port">
+                                            Vice_Port
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="Vice_City_Beach"
+                                        >
+                                            Vice_City_Beach
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="Prawn_Island"
+                                        >
+                                            Prawn_Island
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="Little_Haiti"
+                                        >
+                                            Little_Haiti
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="Ocean_Beach"
+                                        >
+                                            Ocean_Beach
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="Food_Street"
+                                        >
+                                            Food_Street
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="Grand_Library"
+                                        >
+                                            Grand_Library
+                                        </option>
+                                        <option name="table3" value="Airport">
+                                            Airport
+                                        </option>
+                                        <option name="table3" value="Shipyard">
+                                            Shipyard
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="Sheep_Village"
+                                        >
+                                            Sheep_Village
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="Govt_Office"
+                                        >
+                                            Govt_Office
+                                        </option>
+                                        <option name="table3" value="Star_Town">
+                                            Star_Town
+                                        </option>
+                                        <option name="table3" value="Old_City">
+                                            Old_City
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="Leaf_Links"
+                                        >
+                                            Leaf_Links
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="City_Scrap"
+                                        >
+                                            City_Scrap
+                                        </option>
+                                        <option
+                                            name="table3"
+                                            value="New_Downtown"
+                                        >
+                                            New_Downtown
+                                        </option>
+                                        <option name="table3" value="Subways">
+                                            Subways
+                                        </option>
+                                        <option name="table3" value="Trench">
+                                            Trench
+                                        </option>
+                                    </optgroup>
+                                </select>
 
+                                <input
+                                    type="submit"
+                                    id="submit-form"
+                                    class="hidden"
+                                    style="display: none"
+                                />
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="blog-title">
+                        <h3>A lovely trip awaits</h3>
+                        <label class="btn" for="submit-form"><b>Go</b></label>
+                    </div>
+                    <div class="blog-meta">
+                        <p>Important Instruction</p>
+                    </div>
+                    <div class="blog-text">
+                        <p>
+                            Please only select the desired options. The choices
+                            will not be altered after successful confirmation of
+                            the ticket
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-
-
-
-            <%- include('../include/footer.ejs') %>
-
+<%- include('../include/footer.ejs') %>

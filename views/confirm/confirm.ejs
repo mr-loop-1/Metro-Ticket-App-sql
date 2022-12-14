@@ -1,65 +1,71 @@
-<%- include('../include/header_nav.ejs') %>
+<%- include('../include/header_nav.ejs') %> <% if(Ticket == undefined) { %>
 
-    <% if(Ticket == undefined) { %>
-
-        <div class="blog">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Vice City Database says</p>
-                    <h2>This is NOT a valid Ticket !!</h2>
-                    <h4>Please book a ticket first or re-check the Ticket No.</h4>
-                </div>
-            </div>
+<div class="blog">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Vice City Database says</p>
+            <h2>This is NOT a valid Ticket !!</h2>
+            <h4>Please book a ticket first or re-check the Ticket No.</h4>
         </div>
+    </div>
+</div>
 
-    <% } else { %>
-    
-        <div class="blog">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Vice City Database says</p>
-                    <h2>This is a valid Ticket</h2>
-                </div>
-            </div>
+<% } else { %>
+
+<div class="blog">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Vice City Database says</p>
+            <h2>This is a valid Ticket</h2>
         </div>
-        <table>
-            <colgroup>
-              <col span="3">
-              <col style="border: 6px solid #030f27">
-              <col span="9">
-            </colgroup>
-            <thead>
-              <tr>
-                <td colspan="2" scope="rowgroup" style="background-color: #fff;"> </td>
-                <th scope="col">Ticket No.</th>
-                <th scope="col" style="text-align: center;"><%= Ticket.Ticket %></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th rowspan="4" colspan="2" scope="rowgroup" style="background-color: #fff;">Details associated<br>with this ticket no.</th>
-                <th scope="row">Customer Name</th>
-                <td><%= Ticket.Fname %>&nbsp;<%= Ticket.Lname %></td>
-              </tr>
-              <tr>
-                <th scope="row">Contact</th>
-                <td><%= Ticket.Phone %></td>
-              </tr>
-              <tr>
-                <th scope="row">Booking Date</th>
-                <td><%= Ticket.Booking %></td>
-              </tr>
-              <tr>
-                <th scope="row">Route</th>
-                <td><%= Ticket.starter %> to <%= Ticket.dest %></td>
-              </tr>
-            </tbody>
-        </table>
-        <br>
-        <br>
-        <br>
+    </div>
+</div>
+<table>
+    <colgroup>
+        <col span="3" />
+        <col style="border: 6px solid #030f27" />
+        <col span="9" />
+    </colgroup>
+    <thead>
+        <tr>
+            <td
+                colspan="2"
+                scope="rowgroup"
+                style="background-color: #fff"
+            ></td>
+            <th scope="col">Ticket No.</th>
+            <th scope="col" style="text-align: center"><%= Ticket.Ticket %></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th
+                rowspan="4"
+                colspan="2"
+                scope="rowgroup"
+                style="background-color: #fff"
+            >
+                Details associated<br />with this ticket no.
+            </th>
+            <th scope="row">Customer Name</th>
+            <td><%= Ticket.Fname %>&nbsp;<%= Ticket.Lname %></td>
+        </tr>
+        <tr>
+            <th scope="row">Contact</th>
+            <td><%= Ticket.Phone %></td>
+        </tr>
+        <tr>
+            <th scope="row">Booking Date</th>
+            <td><%= Ticket.Booking %></td>
+        </tr>
+        <tr>
+            <th scope="row">Route</th>
+            <td><%= Ticket.starter %> to <%= Ticket.dest %></td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+<br />
 
-    <%  } %>
-
-        <%- include('../include/footer.ejs') %>
-
+<% } %> <%- include('../include/footer.ejs') %>
