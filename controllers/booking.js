@@ -46,7 +46,7 @@ exports.getRoute = async ( req, res, next) => {
         price: price
     })
 
-    return res.render("booking/details", {
+    return res.render("bookings/route", {
         userdataa: route,
         timed: time,
         priced: price,
@@ -63,7 +63,7 @@ exports.showDetails = (req, res, next) => {
         throw new Error;
     }
 
-    res.render('booking/guest', {
+    res.render('bookings/details', {
         priced: price,
         start,
         end,

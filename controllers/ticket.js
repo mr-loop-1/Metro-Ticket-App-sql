@@ -9,7 +9,7 @@ exports.getTicket = async (req, res, next) => {
     }
 
     const ticketDetails = await ticketData.getTicket(ticketId);    
-    return res.render('confirm/confirm', {Ticket: ticketDetails});
+    return res.render('tickets/ticket', {Ticket: ticketDetails});
 }
 
 // Now I see this post request can even be omitted. I just didn't want to interfere with original logic

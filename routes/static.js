@@ -3,25 +3,25 @@ const router = Router();
 
 
 router.get("/about", (req,res) => {
-    return res.render("filler/about");
+    return res.render("static/about");
 });
 router.get("/login_admin", (req,res) => {
     return res.render("login_admin");
 });
 router.get("/contact", (req, res) => {
-    return res.render('filler/contact');
+    return res.render('static/contact');
 });
 router.get('/team', (req, res) => {
-    return res.render('filler/team');
+    return res.render('static/team');
 });  
 router.get('/portfolio', (req, res) => {
-    return res.render('filler/portfolio');
+    return res.render('static/portfolio');
 });
 router.get('/networkmap', (req, res) => {
-    return res.render('filler/networkmap');
+    return res.render('static/networkmap');
 });
 router.get('/', (req, res) => {
-    return res.render("metro");
+    return res.render("index");
 });
 
 
