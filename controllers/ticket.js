@@ -8,10 +8,7 @@ exports.getTicket = async (req, res, next) => {
         throw new Error;
     }
 
-    const ticketDetails = await ticketData.getTicket(ticketId);
-
-    console.log("🚀 ~ file: ticket.js:7 ~ exports.getTicket= ~ ticketDetails:", ticketDetails)
-    
+    const ticketDetails = await ticketData.getTicket(ticketId);    
     return res.render('confirm/confirm', {Ticket: ticketDetails});
 }
 

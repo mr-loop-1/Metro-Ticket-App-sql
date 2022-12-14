@@ -29,7 +29,6 @@ exports.getRoute = async ( req, res, next) => {
     }
 
     const route = await routeData.fetchRoute();
-    console.log("🚀 ~ file: booking.js:32 ~ exports.getRoute= ~ route:", route)
 
     rawData.query("TRUNCATE stack_Compare");
     rawData.query("TRUNCATE lastNodeTracker");
