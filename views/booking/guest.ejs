@@ -31,6 +31,9 @@
                         
                         <form action="/users/status" method="post">
                         <fieldset>
+                          <input type="hidden" name="start" value="<%=start%>">
+                          <input type="hidden" name="end" value="<%=end%>">
+                          <input type="hidden" name="price" value="<%=price%>">
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group first">

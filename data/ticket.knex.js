@@ -8,3 +8,21 @@ exports.getTicket = async (ticketId) => {
 
     return await query;
 }
+
+exports.createTicket = async (inputs) => {
+    const query = knex("details");
+
+    query.insert({
+        Ticket: inputs.id,
+        Fname: inputs.fname,
+        Lname: inputs.lname,
+        Phone: inputs.phone,
+        Booking: inputs.date,
+        starter: inputs.start,
+        dest: inputs.dest
+    })
+    .onConflict()
+    .ignore();
+
+    return await query;
+}

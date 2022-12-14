@@ -1,5 +1,5 @@
 const { bookingTasks } = require('../tasks');
-const {rawData, routeData} = require('./../data')
+const {rawData, routeData, ticketData} = require('./../data')
 
 exports.createRoute = async (req, res, next) => {
 
@@ -57,19 +57,38 @@ exports.getRoute = async ( req, res, next) => {
 }
 
 exports.showDetails = (req, res, next) => {
-    const {start, end, price} = req.query;
+    const {start, end, price, id, fname, lname} = req.query;
 
     if(!start || !end) {
         throw new Error;
     }
 
     res.render('booking/guest', {
-        title: "mains",
-        start: variabled,
-        end: variabled2,
         priced: price,
-        id: variabled3,
-        fname: fname,
-        lname: lname,
+        start,
+        end,
+        id,
+        fname,
+        lname,
     })
+}
+
+exports.registerTicket = async (req, res, next) => {
+
+    const {
+        fname, lname, phone, myDate: date, start, end, price
+    } = req.body;
+
+    id = Math.floor((Math.random() * 10000000) + 1);
+
+    const inputs = {
+        fname, lname, phone, date, id, start, end
+    }
+
+    await ticketData.createTicket(inputs);
+
+    const query = new URLSearchParams(...inputs, price)
+
+    res.redirect('/booking/details?'+query);
+
 }
