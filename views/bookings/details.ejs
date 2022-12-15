@@ -34,7 +34,10 @@
                                             placeholder="e.g. hello"
                                             id="fname"
                                             name="fname"
+                                            minlength="1"
                                             maxlength="10"
+                                            required
+                                            <% if(id) { %>disabled<% } %>
                                         />
                                     </div>
                                 </div>
@@ -47,7 +50,10 @@
                                             placeholder="e.g. world"
                                             id="lname"
                                             name="lname"
+                                            minlength="1"
                                             maxlength="10"
+                                            required
+                                            <% if(id) { %>disabled<% } %>
                                         />
                                     </div>
                                 </div>
@@ -58,11 +64,16 @@
                                         <label for="phone">Contact</label>
                                         <input
                                             type="text"
+                                            title="Please enter only digits"
+                                            pattern="[0-9]*"
                                             class="form-control"
                                             placeholder="+00 0000 000 0000"
                                             id="phone"
                                             name="phone"
-                                            maxlength="10"
+                                            minlength="7"
+                                            maxlength="12"
+                                            required
+                                            <% if(id) { %>disabled<% } %>
                                         />
                                     </div>
                                 </div>
@@ -90,7 +101,7 @@
                             <div class="blog-item">
                                 <div class="blog-title">
                                     <h3>Proceed to checkout</h3>
-                                    <button class="btn2" type="submit" /><b
+                                    <button class="btn2" type="submit" title="Already registered" <% if(id) { %>disabled<% } %> /><b
                                         >Go</b
                                     >
                                 </div>
