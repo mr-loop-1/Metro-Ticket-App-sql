@@ -1,5 +1,5 @@
 const Knex = require("knex");
-const { knexSnakeCaseMappers } = require("objection");
+// const { knexSnakeCaseMappers } = require("objection");
 
 const knex = Knex({
     client: "mysql2",

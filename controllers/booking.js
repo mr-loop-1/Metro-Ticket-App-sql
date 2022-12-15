@@ -33,9 +33,9 @@ exports.getRoute = async ( req, res, next) => {
     rawData.query("TRUNCATE stack_Compare");
     rawData.query("TRUNCATE lastNodeTracker");
 
-    if(!route.length) {
-        throw new Error; //? or simply display alternate in view
-    }
+    // if(!route.length) {
+    //     throw new Error; //? or simply display alternate in view
+    // }
 
     const {gate1, gate2} = bookingTasks.randomGates();
     const {time, price} = bookingTasks.getTimeAndPrice(route.length);

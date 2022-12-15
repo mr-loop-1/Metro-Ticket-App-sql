@@ -3,12 +3,10 @@ const {ticketData} = require('./../data')
 
 exports.getTicket = async (req, res, next) => {
     const ticketId = req.query.ticketId;
-
-    if(!ticketId) {
-        throw new Error;
+    let ticketDetails;
+    if(ticketId) {
+        ticketDetails = await ticketData.getTicket(ticketId);    
     }
-
-    const ticketDetails = await ticketData.getTicket(ticketId);    
     return res.render('tickets/ticket', {Ticket: ticketDetails});
 }
 
