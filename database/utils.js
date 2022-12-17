@@ -9,3 +9,10 @@ exports.timestamps = (knex, table) => {
         .notNullable()
         .defaultTo(knex.raw("CURRENT_TIMESTAMP"));
 };
+
+exports.onUpdateTrigger = (table) => `
+    CREATE TRIGGER ${table}_updated_at
+    BEFORE UPDATE ON ${table}
+    FOR EACH ROW
+    SET NEW.updated_at = now();
+`;

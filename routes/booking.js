@@ -1,7 +1,6 @@
 const { Router } = require('express');
 const { bookingController } = require('./../controllers')
 
-
 const router = Router();
 
 router.get('/stations', (req, res, next) => {

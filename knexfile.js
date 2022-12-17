@@ -1,3 +1,6 @@
+const path = require('path')
+
+
 module.exports = {
 
   development: {
@@ -10,7 +13,7 @@ module.exports = {
         database: "metro4",
     },
     migrations: {
-        directory: "./database/migrations",
+        directory: path.join(__dirname, 'database/migrations'),
     },
     // ...knexSnakeCaseMappers(),
   },
