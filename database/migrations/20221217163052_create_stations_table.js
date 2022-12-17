@@ -6,15 +6,13 @@ exports.up = async function(knex) {
     const migration = await knex.schema.createTable(
         "Station",
         function (table) {
-            table.bigIncrements("Station_ID").primary();
+            table.integer("Station_ID").primary();
             table.string("Name").index();
-            table.bigInteger("Prev_Station").nullable().index();
-            table.bigInteger("Next_Station").nullable().index();
-            table.string("Color").nullable().index();
-            timestamps(knex, table);
+            table.integer("Prev_Station").nullable().index();
+            table.integer("Next_Station").nullable().index();
+            table.string("Color");
         }
     );
-    await knex.raw(onUpdateTrigger("Station"));
     return migration;
 };
 

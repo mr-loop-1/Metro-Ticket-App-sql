@@ -8,7 +8,7 @@ const knex = Knex({
         port: 3306,
         user: "root",
         password: "yesmysql123",
-        database: "metro3",
+        database: "metro4",
     },
     // ...knexSnakeCaseMappers(),
 });
