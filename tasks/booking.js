@@ -4,6 +4,6 @@ exports.randomGates = () => ({
 })
 
 exports.getTimeAndPrice = (stationCount) => ({
-    time: (10 * stationCount.freq)  - 5,
+    time: (10 * stationCount)  - 5,
     price: (stationCount*10)
 })

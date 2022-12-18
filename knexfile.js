@@ -17,7 +17,7 @@ module.exports = {
     },
     seeds: {
       directory: path.join(__dirname, 'database/seeders'),
-  }
+    }
     // ...knexSnakeCaseMappers(),
   },
 
@@ -37,7 +37,11 @@ module.exports = {
     migrations: {
       directory: "./database/migrations",
       tableName: 'knex_migrations'
-    }
+    },
+    seeds: {
+      directory: path.join(__dirname, 'database/seeders'),
+    },
+    // ...knexSnakeCaseMappers(),
   }
 
 };
