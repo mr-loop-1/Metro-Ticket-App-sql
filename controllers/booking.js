@@ -9,7 +9,6 @@ exports.createRoute = async (req, res, next) => {
     }
     
     await rawData.query("TRUNCATE stack_Compare");
-    await rawData.query("TRUNCATE lastNodeTracker");
     await rawData.query("SET max_sp_recursion_depth=100");
 
     await routeData.createRoute(station1, station2);
@@ -31,7 +30,6 @@ exports.getRoute = async ( req, res, next) => {
     const route = await routeData.fetchRoute();
 
     rawData.query("TRUNCATE stack_Compare");
-    rawData.query("TRUNCATE lastNodeTracker");
 
     // if(!route.length) {
     //     throw new Error; //? or simply display alternate in view

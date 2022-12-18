@@ -15,6 +15,9 @@ module.exports = {
     migrations: {
         directory: path.join(__dirname, 'database/migrations'),
     },
+    seeds: {
+      directory: path.join(__dirname, 'database/seeders'),
+  }
     // ...knexSnakeCaseMappers(),
   },
 
