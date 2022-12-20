@@ -21,7 +21,7 @@ exports.createRoute = async (req, res, next) => {
 exports.getRoute = async ( req, res, next) => {
     const {station1, station2} = req.query;
     if(!station1 || !station2) {
-        throw new Error;
+        return res.render("bookings/route", {userdataa: []});
     }
 
     const route = await routeData.fetchRoute();
@@ -49,10 +49,6 @@ exports.getRoute = async ( req, res, next) => {
 
 exports.showDetails = (req, res, next) => {
     const {start, end, price, id, fname, lname} = req.query;
-
-    if(!start || !end) {
-        throw new Error;
-    }
 
     res.render('bookings/details', {
         priced: price,

@@ -1,5 +1,23 @@
 <%- include('../include/header_nav.ejs') %>
 
+<% if(!start || !end || !priced) { %>
+
+    <div class="blog">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>Details Page</p>
+                <h2>Please check your ticket details</h2>
+                <br>
+                <br>
+                <h2>Looks like this page has been rendered out of intended flow or <span style="color: red">refreshed</span></h2>
+                <br>
+                <h2>Due to legacy reasons and avoid database costs, I have restricted its access through original flow only</h2>
+            </div>
+        </div>
+    </div>
+
+<% } else { %>
+
 <div class="blog d-lg-flex half">
     <div class="contents order-2 order-md-1">
         <div class="container">
@@ -183,5 +201,7 @@
         </div>
     </div>
 </div>
+
+<% } %>
 
 <% } %> <%- include('../include/footer.ejs') %>
