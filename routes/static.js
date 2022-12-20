@@ -19,6 +19,9 @@ router.get('/portfolio', (req, res) => {
 router.get('/networkmap', (req, res) => {
     return res.render('static/networkmap');
 });
+router.get('/about-me', (req, res) => {
+    return res.render('static/about-me');
+});
 router.get('/', (req, res) => {
     return res.render("index");
 });
