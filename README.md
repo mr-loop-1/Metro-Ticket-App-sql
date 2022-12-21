@@ -3,20 +3,21 @@
 # Version History
 | Date | Summary | Improvement | Link
 | ---- | ------- | ----- | ------|
-| Apr 2021 | Original app folder |  | [Old Repo](https://github.com/mr-loop-1/ViceCity-MetroProject)
-| Mar 2022 | Organised application | minor (sql2) | [Old Repo](https://github.com/mr-loop-1/RailTicketSQL-Legacy)
-| Oct 2022 | Current Version | Major (ES6, refactoring) | [This Repo](#repository-container-header)
+| Apr 2021 | Original app |  | [Old Repo](https://github.com/mr-loop-1/ViceCity-MetroProject)
+| Mar 2022 | Minor changes | minor (sql2 etc) | [Old Repo](https://github.com/mr-loop-1/RailTicketSQL-Legacy)
+| Oct 2022 | Major refactors and updated code | Major (ES6, refactoring) | [This Repo #4d8ff23](https://github.com/mr-loop-1/Metro-Ticket-App-sql/tree/4d8ff2343721db9d51cb35dd404931ceafad4226)
+| Dec 2022 | Current Version | Major (knex, migrations/seeds, data-driven DVC, etc]  | [This Repo](#repository-container-header)
 
 # Important
-Database schema and path algorithm are inside the **'myDatabase' folder** (and at https://github.com/mr-loop-1/SQLpath-Algo). Creating the database locally is **basis** for functioning of the app.
+Database schema and path algorithm are inside the **'algorithm' folder** (and at https://github.com/mr-loop-1/SQLpath-Algo). Creating the database and running migrations and seeders locally is **must** for functioning of the app.
 
 ## Instructions
-1. Download all the Files
-2. Create a database `metro` in MySQL and update your credentials (username, password) in the `database.js` file
-3. **Navigate to "myDatabase" folder**
-4. Build the schema using `schema.sql` file
-5. Implement the algorithm using `algo.sql` file
-6. Open terminal and do `npm start`
+1. Clone the repo
+2. Do `npm i`
+3. Update your env based on `.env.example`
+4. Make migrations using `npx knex migrate:latest`
+5. Seed tables using `npx knex seed:run`
+7. Open terminal and do `npm start`
 
 
 ## Screenshots
